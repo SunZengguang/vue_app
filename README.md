@@ -3,8 +3,10 @@
 
 ### Just that 
 
-#### use orders below:
+### use orders below:
 
-##### npm i
+#### npm i
 
-##### npm run dev
+#### npm run dev
+
+#### just that for now !
