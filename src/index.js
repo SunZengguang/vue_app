@@ -19,6 +19,11 @@ import '../lib/mui/css/icons-extra.css' //导入Tabbar购物车的样式
  //不懂这里ttf文件为什么不用导入？？
 import VueResourse from 'vue-resource' //导入vue-source
 Vue.use(VueResourse) //安装到Vue下
+//定义全局的过滤器
+import moment from 'moment'
+Vue.filter('timeFormat',(dataStr,pattern = 'YYYY-MM-DD  hh:mm:ss')=>{
+  return  moment(dataStr).format(pattern)
+} )
 
 var vm = new Vue({
     el: '#app',

@@ -1,9 +1,11 @@
 <template>
   <div class="fatherBox">
-    <!--区域1  -->
+    <!--区域 1 头部  -->
     <mt-header fixed title="App项目"></mt-header>
     <!--区域2  -->
+    <transition mode="">
     <router-view></router-view>
+    </transition>
     <!--底部区域 -->
 
     <nav class="mui-bar mui-bar-tab">
@@ -33,5 +35,21 @@
 <style>
 .fatherBox {
   margin-top: 40px;
+  overflow-x: hidden;
+  margin-bottom: 50px;
+}
+
+.v-enter{
+  opacity: 0;
+  transform: translateX(100%);
+}
+.v-leave-to{
+  opacity: 0;
+  transform: translateX(-100%);
+  position :absolute;
+}
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.5s ease;
 }
 </style>

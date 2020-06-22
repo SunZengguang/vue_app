@@ -11,10 +11,10 @@
    <!-- 6宫格 -->
   <ul class="mui-table-view mui-grid-view mui-grid-9">
     <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-      <a href="#">
+      <router-link to="/home/news">
        <img src="../../images/menu1.png" alt="" srcset="">
         <div class="mui-media-body">新闻资讯</div>
-      </a>
+      </router-link>
     </li>
     <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
       <a href="#">
