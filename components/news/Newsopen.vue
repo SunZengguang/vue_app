@@ -6,7 +6,11 @@
       <span>点击 {{list.click}} 次</span>
     </div>
     <hr />
+    <!-- 内容 -->
     <div class="content" v-html='list.content'></div>
+    <!-- 评论 -->
+    <comment-box :id="this.id"></comment-box>
+    <!-- 给子组件传值，绑定自定义属性 -->
   </div>
 </template>
 
@@ -32,6 +36,7 @@
 </style>
 
 <script>
+import comment from '../comment/Comment.vue'
 export default {
     data(){
         return {
@@ -52,6 +57,9 @@ export default {
                 }
             })
         }
+    },
+    components:{ //父组件中注册子组件
+        'comment-box':comment
     }
 }
 </script>
